@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://Encryption/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Encryption/">
+
+<xs:element name="ArgumentException" nillable="true" type="tns:cipherException"/>
+
+<xs:element name="Cipher" type="tns:Cipher"/>
+
+<xs:element name="CipherResponse" type="tns:CipherResponse"/>
+
+<xs:element name="decipher" type="tns:decipher"/>
+
+<xs:element name="decipherResponse" type="tns:decipherResponse"/>
+
+<xs:complexType name="Cipher">
+<xs:sequence>
+<xs:element name="Text" type="xs:string" minOccurs="0"/>
+<xs:element name="Shift" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CipherResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cipherException">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="decipher">
+<xs:sequence>
+<xs:element name="DecipherText" type="xs:string" minOccurs="0"/>
+<xs:element name="Shiftback" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="decipherResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
